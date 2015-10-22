@@ -1,0 +1,57 @@
+<%= form_for(@gear) do |f| %>
+  <% if @gear.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gear.errors.count, "error") %> prohibited this gear from being saved:</h2>
+
+      <ul>
+      <% @gear.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :owner %><br>
+    <%= f.text_field :owner %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :brand %><br>
+    <%= f.text_field :brand %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :borrow %><br>
+    <%= f.text_field :borrow %>
+  </div>
+  <div class="field">
+    <%= f.label :selling %><br>
+    <%= f.text_field :selling %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_area :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
