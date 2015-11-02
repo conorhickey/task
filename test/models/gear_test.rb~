@@ -27,19 +27,19 @@ test "gear price must be positive" do
   assert gear.errors[:price].none?
 end
 test "image must point to an image file" do
-  gear = gears(:one)
+  product = products(:one)
   ok = %w{ frog.gif frog.jpg frog.png FROG.PNG fRoG.PnG
            http://a.b.c/x/y/z/frog.png frog.jpeg }
   bad = %w{ frog.doc frog.png/less frog.png.less }
 
   ok.each do |url|
-    gear.image = url
-    assert gear.valid?, "#{url} should be a valid image url"
+    product.image = url
+    assert product.valid?, "#{url} should be a valid image url"
   end
 
   bad.each do |url|
-    gear.image = url
-    assert gear.invalid?, "#{url} shouldn't be a valid image url"
+    product.image = url
+    assert product.invalid?, "#{url} shouldn't be a valid image url"
   end
 end
 end

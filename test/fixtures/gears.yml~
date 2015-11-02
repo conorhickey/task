@@ -10,7 +10,7 @@ one:
   borrow: MyString
   selling: MyString
   price: 9.99
-  image: MyText.jpeg
+  image: MyText
 
 two:
   owner: MyString
@@ -22,4 +22,4 @@ two:
   borrow: MyString
   selling: MyString
   price: 9.99
-  image: MyText.jpeg
+  image: MyText
