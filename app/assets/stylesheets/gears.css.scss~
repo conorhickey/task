@@ -42,10 +42,10 @@
   }
 
   .list_line_even {
-    background:   cyan;
+    background:   blue;
   }
 
   .list_line_odd {
-    background:   lightgreen;
+    background:   green;
   }
 }
