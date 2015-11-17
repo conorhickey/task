@@ -7,13 +7,14 @@ h1 {
   margin: 0;
   padding-bottom: 0.5em;
   font: 250% sans-serif;
-  color: #4A6B8A;
+  color: #294968;
   border-bottom: 3px dotted #77d;
 }
 /* An entry in the store catalog */
 .entry {
 img {
   width: 120px;
+  max-height: 120px;
   margin-right: 5px;
   margin-bottom: 5px;
   position: absolute;
@@ -40,6 +41,6 @@ h5 {
   overflow: auto;
   margin-top: 1em;
   border-bottom: 1px dotted #77d;
-  min-height: 150px;
+  min-height: 140px;
 }
 }

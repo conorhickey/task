@@ -14,6 +14,7 @@ h1 {
 .entry {
 img {
   width: 120px;
+  max-height: 120px;
   margin-right: 5px;
   margin-bottom: 5px;
   position: absolute;
@@ -40,6 +41,6 @@ h5 {
   overflow: auto;
   margin-top: 1em;
   border-bottom: 1px dotted #77d;
-  min-height: 1000px;
+  min-height: 140px;
 }
 }

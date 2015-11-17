@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .gears {
+h1{color: #444444}
   table {
     border-collapse: collapse;
   }
@@ -12,7 +13,7 @@
     vertical-align: top;
   }
 
-  .image {
+  .list_image {
     width:  100px;
     height: 100px;
   }
