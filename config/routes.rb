@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :carts
+
   get 'kayaker/index'
 
   resources :gears

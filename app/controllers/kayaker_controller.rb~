@@ -1,5 +1,6 @@
 class KayakerController < ApplicationController
   def index
-	@gears = gear.order(:owner)
+	@gears = Gear.group(:owner)
+	@gear = Gear.order(:owner)
   end
 end
