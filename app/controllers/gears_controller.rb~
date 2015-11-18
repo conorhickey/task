@@ -1,11 +1,21 @@
 class GearsController < ApplicationController
-has_many :line_items
   before_action :set_gear, only: [:show, :edit, :update, :destroy]
-
   # GET /gears
   # GET /gears.json
   def index
-    @gears = Gear.all
+#@gears = Gear.all
+
+
+
+    if params[:search]
+      @articles = Gear.search(params[:search]).order("created_at DESC")
+    else
+      @articles = Gear.order("created_at DESC")
+    end
+
+
+
+
   end
 
   # GET /gears/1

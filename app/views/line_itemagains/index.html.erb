@@ -1,0 +1,27 @@
+<h1>Listing line_itemagains</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gear</th>
+      <th>Student</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @line_itemagains.each do |line_itemagain| %>
+      <tr>
+        <td><%= line_itemagain.gear %></td>
+        <td><%= line_itemagain.student %></td>
+        <td><%= link_to 'Show', line_itemagain %></td>
+        <td><%= link_to 'Edit', edit_line_itemagain_path(line_itemagain) %></td>
+        <td><%= link_to 'Destroy', line_itemagain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Line itemagain', new_line_itemagain_path %>

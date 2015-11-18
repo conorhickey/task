@@ -1,10 +1,10 @@
 class GearsController < ApplicationController
   before_action :set_gear, only: [:show, :edit, :update, :destroy]
-
   # GET /gears
   # GET /gears.json
   def index
-    @gears = Gear.all
+@gears = Gear.all
+
   end
 
   # GET /gears/1

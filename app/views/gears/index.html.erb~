@@ -18,9 +18,9 @@
   </dl>
 </td>
 <td class='list_actions'>
-  <%= link_to 'Show', product %><br/>
-  <%= link_to 'Edit', edit_product_path(product) %><br/>
-  <%= link_to 'Destroy', product, method: :delete, 
+  <%= link_to 'Show', gear %><br/>
+  <%= link_to 'Edit', edit_gear_path(gear) %><br/>
+  <%= link_to 'Destroy', gear, method: :delete, 
       data: { confirm: 'Are you sure?' } %>
 </td>
       <% end %>
@@ -31,3 +31,14 @@
 <br>
 
 <%= link_to 'New Gear', new_gear_path %>
+
+
+
+
+
+<% @gears.each do |gear| %>
+  <div class="article">
+    <h1 class="article-title"><%= link_to gear.owner, gear %></h1>
+
+  </div>
+<% end %>
