@@ -12,6 +12,12 @@ h1 {
 }
 /* An entry in the store catalog */
 .entry {
+form, div {
+margin-top: 6px;
+margin-left: 62px;	
+	position: absolute;
+
+}
 img {
   width: 120px;
   max-height: 120px;
@@ -21,6 +27,8 @@ img {
 }
 
 h3 {
+
+
   font-size: 120%;
   font-family: sans-serif;
   margin-left: 130px;

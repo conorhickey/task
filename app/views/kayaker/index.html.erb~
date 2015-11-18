@@ -8,17 +8,13 @@
 
 <% @gears.each do |gear| %>
   <div class="entry">
+<%= button_to 'Add to Cart', line_items_path(gear_id: gear) 
+    <%= image_tag(gear.image) %>
     <h3><%= gear.owner %></h3>
-	<% @gear.each do |gear| %>
-  <div class="entry">
-	<%= image_tag(gear.image) %>
     <h5><%= sanitize gear.category %></h5>
     <h5><%= sanitize gear.brand %> <%= sanitize gear.model %></h5>
     <h5><%= sanitize gear.size %></h5>	
-
-  </div>
-<% end %>
-
+	<%= button_to 'Add to Cart', line_items_path(gear_id: gear) %>
 
   </div>
 <% end %>

@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022135608) do
+ActiveRecord::Schema.define(version: 20151117223614) do
+
+  create_table "carts", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "gears", force: true do |t|
     t.string   "owner"
@@ -24,6 +29,27 @@ ActiveRecord::Schema.define(version: 20151022135608) do
     t.string   "selling"
     t.decimal  "price",       precision: 8, scale: 2
     t.text     "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "line_items", force: true do |t|
+    t.integer  "gear_id"
+    t.integer  "cart_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id"
+  add_index "line_items", ["gear_id"], name: "index_line_items_on_gear_id"
+
+  create_table "members", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

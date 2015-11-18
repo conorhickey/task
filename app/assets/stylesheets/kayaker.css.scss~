@@ -7,11 +7,17 @@ h1 {
   margin: 0;
   padding-bottom: 0.5em;
   font: 250% sans-serif;
-  color: #4A6B8A;
+  color: #294968;
   border-bottom: 3px dotted #77d;
 }
 /* An entry in the store catalog */
 .entry {
+form, div {
+margin-top: 10px;
+margin-left: 60px;	
+	position: absolute;
+
+}
 img {
   width: 120px;
   max-height: 120px;
@@ -21,6 +27,8 @@ img {
 }
 
 h3 {
+
+
   font-size: 120%;
   font-family: sans-serif;
   margin-left: 130px;

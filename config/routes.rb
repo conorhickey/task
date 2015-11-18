@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :carts
+  resources :users
 
+  resources :carts
+resources :line_items
   get 'kayaker/index'
 
   resources :gears

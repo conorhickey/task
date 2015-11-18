@@ -16,7 +16,7 @@
     <%= f.text_field :gear_id %>
   </div>
   <div class="field">
-    <%= f.label :cart_id %><br>
+    <%= f.label :memeber_id %><br>
     <%= f.text_field :cart_id %>
   </div>
   <div class="actions">
