@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Memeber:</strong>
-  <%= @line_item.memeber %>
+  <strong>Cart:</strong>
+  <%= @line_item.cart %>
 </p>
 
 <%= link_to 'Edit', edit_line_item_path(@line_item) %> |

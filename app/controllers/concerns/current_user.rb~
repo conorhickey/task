@@ -1,0 +1,11 @@
+module CurrentUser
+  extend ActiveSupport::Concern
+
+
+
+  def set_user 
+    @user = User.find(session[:user_id])
+    @user = User.create
+    session[:user_id] = @user.id
+  end
+end
