@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+get 'administer' => 'administer#index'
+
+controller :sessions do
+  get 'login' => :new
+  post 'login' => :create
+  delete 'logout' => :destroy
+end
+
+  resources :admins
+
   get "/pages/:page" => "pages#show"
   resources :line_itemagains
 

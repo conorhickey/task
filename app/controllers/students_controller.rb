@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+skip_before_action :authorize, only: [:show, :index]
   before_action :set_student, only: [:show, :edit, :update, :destroy]
 
   # GET /students

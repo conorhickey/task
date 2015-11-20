@@ -1,20 +1,10 @@
 class GearsController < ApplicationController
+skip_before_action :authorize, only: [:show, :index]
   before_action :set_gear, only: [:show, :edit, :update, :destroy]
   # GET /gears
   # GET /gears.json
   def index
-#@gears = Gear.all
-
-
-
-    if params[:search]
-      @articles = Gear.search(params[:search]).order("created_at DESC")
-    else
-      @articles = Gear.order("created_at DESC")
-    end
-
-
-
+@gears = Gear.all
 
   end
 

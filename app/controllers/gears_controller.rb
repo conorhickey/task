@@ -1,4 +1,5 @@
 class GearsController < ApplicationController
+skip_before_action :authorize, only: [:show]
   before_action :set_gear, only: [:show, :edit, :update, :destroy]
   # GET /gears
   # GET /gears.json

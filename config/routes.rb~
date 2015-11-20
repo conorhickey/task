@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  get 'administer/index'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  resources :admins
+
+  get "/pages/:page" => "pages#show"
   resources :line_itemagains
 
   resources :students

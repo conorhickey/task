@@ -16,12 +16,23 @@
   <div id="side">
     <ul>
 	<li><a href="http://localhost:3000/">Home</a></li>
-	<li><a href="http://localhost:3000/gears">Gear</a></li>
 	<li><a href="http://localhost:3000/students">Students</a></li>
+	<li><a href="http://localhost:3000/pages/FAQ">FAQ</a></li>
 	<li><a href="http://localhost:3000/pages/Contact_Us">Contact</a></li>
+
     </ul>
     <%= Time.now %>
 
+<% if session[:admin_id] %>
+</br></br>
+<b><u>Admin Access/</u></b> </br>
+<a href="http://localhost:3000/gears">Gear Log</a>
+</br></br>
+  <%= button_to 'Logout', logout_path, :method => :delete   %>
+<% else %>
+</br></br>
+<a href="http://localhost:3000/login"><b>LOGIN</b></a>
+<% end %>
   </div>
   <div id="main">
     <%= yield %>
