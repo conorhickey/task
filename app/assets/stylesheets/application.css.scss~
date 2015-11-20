@@ -38,6 +38,7 @@ body {
   margin-bottom: 2em;
   background-color: #f0f0f0;
   font: bold smaller sans-serif;
+  color: black; !important;
 }
 
 #columns {
@@ -46,7 +47,7 @@ body {
   #main {
     margin-left: 17em;
     padding: 1em;
-    background: lightnavy;
+    background: teal;
   }
 
   #side {
