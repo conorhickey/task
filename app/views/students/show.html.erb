@@ -1,4 +1,6 @@
-<h2>  <%= @student.name %>'s Gear</h2>
+<h1>  <%= @student.name %>'s Gear</h2>
+<h3>  Contact Details: <%= @student.e %></h3>
+<h4>Always ask before borrowing gear!</h4>
 <% @gears.each do |gear| %>
 <% if gear.owner == @student.name %>
   <div class="entry">
@@ -9,10 +11,12 @@
     <h5><%= sanitize gear.category %></h5>
     <h5><%= sanitize gear.brand %> <%= sanitize gear.model %></h5>
     <h5><%= sanitize gear.size %></h5>	
-      <h5><%= link_to 'More details', gear %></h5>	
+    <h5>Borrowable <%= sanitize gear.borrow %><br/></h5>	
+      <h5><br/><%= link_to 'More details', gear %></h5>	
 
   </div>
  <% end %>
+
 <% end %>
 
 

@@ -57,7 +57,7 @@ class StudentsController < ApplicationController
   def destroy
     @student.destroy
     respond_to do |format|
-      format.html { redirect_to students_url, notice: 'Student was successfully destroyed.' }
+      format.html { redirect_to students_path, notice: 'Student was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -70,6 +70,6 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:username, :name, :other, :date)
+      params.require(:student).permit(:username, :name, :other, :d, :e)
     end
 end

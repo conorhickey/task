@@ -20,15 +20,16 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :other %><br>
-    <%= f.text_area :other %>
+    <%= f.label :other, "College" %><br>
+    <%=f.select :other, Student::Colleges, 
+                  prompt: "Select a Collge" %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
     <%= f.date_select :d %>
   </div>
   <div class="field">
-    <%= f.label :mobile number %><br>
+    <%= f.label :mobile_number, "Phone Number" %><br>
     <%= f.text_field :e %>
   </div>
   <div class="actions">

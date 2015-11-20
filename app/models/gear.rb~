@@ -1,6 +1,6 @@
 class Gear < ActiveRecord::Base
 belongs_to :student
-before_destroy :ensure_not_referenced_by_any_line_itemagain
+
 validates :owner, :category, :brand,:model,:description,:size, presence: true
 validates :price, allow_blank: true, numericality: { greater_than_or_equal_to: 0.01 }
 validates :image, allow_blank: true, format: {

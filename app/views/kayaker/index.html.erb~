@@ -1,13 +1,11 @@
 
-<form id="searchbox">
-  Search:
-  <input type="search" name="gearsearch" placeholder="Enter Owner, Category, Brand..."/>
-</form>
+
 <% if notice %>
   <p id="notice"><%= notice %></p>
 <% end %>
 
-<h1>Kayaker</h1>
+<h1>The Shed</h1>
+<h2> Here you will find all the gear of the NUIG Kayak Club</h2>
 
 <% @gears.each do |gear| %>
   <div class="entry">
@@ -19,7 +17,6 @@
     <h5><%= sanitize gear.brand %> <%= sanitize gear.model %></h5>
     <h5><%= sanitize gear.size %></h5>	
       <h5><%= link_to 'More details', gear %></h5>	
-	<%= button_to 'Add to student', line_itemagains_path(gear_id: gear) %>
 
   </div>
 <% end %>
