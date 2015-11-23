@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kayak</title>
+  <title>NUIG Kayak Clubhouse</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,7 +9,7 @@
 <body>
 <div id="banner">
   <%= image_tag("logo.png") %>
-  <%= @page_title || "Kayak" %>
+  <%= @page_title || "NUIGKC SHED" %>
 </div>
 <%= content_tag :body, class: controller.controller_name do %>
 <div id="columns">
@@ -25,13 +25,17 @@
 
 <% if session[:admin_id] %>
 </br></br>
-<b><u>Admin Access</u></b> </br>
-<a href="http://localhost:3000/gears">Gear Log</a>
+<h7><b><u>Admin Access</u></b></h7>
+<ul>
+<li><a href="http://localhost:3000/gears">Gear Log</a></li>
+<li><a href="http://localhost:3000/admins">Admins</a></li>
+<li><a href="http://localhost:3000/admins/new">New Admin</a></li>
+<ul>
 </br></br>
   <%= button_to 'Logout', logout_path, :method => :delete   %>
 <% else %>
 </br></br>
-<a href="http://localhost:3000/login"><b>LOGIN</b></a>
+<h7><a href="http://localhost:3000/login"><h7><b>ADMIN LOGIN</b></h7></a></h7>
 <% end %>
   </div>
   <div id="main">

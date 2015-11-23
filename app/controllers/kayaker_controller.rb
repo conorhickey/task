@@ -1,7 +1,7 @@
 class KayakerController < ApplicationController
 skip_before_action :authorize
   def index
-	@gears = Gear.order(:owner)
+	@gears = Gear.order(:category)
 
   end
 end

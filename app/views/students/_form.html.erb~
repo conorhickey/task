@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :username %><br>
+    <%= f.label :username, "ID" %><br>
     <%= f.text_field :username %>
   </div>
   <div class="field">
@@ -22,7 +22,7 @@
   <div class="field">
     <%= f.label :other, "College" %><br>
     <%=f.select :other, Student::Colleges, 
-                  prompt: "Select a Collge" %>
+                  prompt: "Select a College" %>
   </div>
   <div class="field">
     <%= f.label :date %><br>

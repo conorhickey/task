@@ -1,3 +1,6 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 <h1>  <%= @student.name %>'s Gear</h2>
 <h3>  Contact Details: <%= @student.e %></h3>
 <h4>Always ask before borrowing gear!</h4>
@@ -10,9 +13,21 @@
 
     <h5><%= sanitize gear.category %></h5>
     <h5><%= sanitize gear.brand %> <%= sanitize gear.model %></h5>
-    <h5><%= sanitize gear.size %></h5>	
-    <h5>Borrowable <%= sanitize gear.borrow %><br/></h5>	
-      <h5><br/><%= link_to 'More details', gear %></h5>	
+    <h5><%= sanitize gear.size %><br/><br/></h5>	
+    <% if gear.borrow == "Yes" %>
+      <h5>Borrowable <br/></h5>	
+    <% end %>
+
+    <% if gear.selling == "Yes" %>
+      <h5>Selling <br/></h5>
+	<% if gear.price.nil?%>
+	<h5>Ask for price</h5>
+	<% else %>
+	  <h5><%= gear.price %>€</h5>
+	<% end %>	
+    <% end %>
+
+    <h5><br/><%= link_to 'More details', gear %></h5>	
 
   </div>
  <% end %>

@@ -22,10 +22,10 @@
   <div class="field">
     <%= f.label :other, "College" %><br>
     <%=f.select :other, Student::Colleges, 
-                  prompt: "Select a Collge" %>
+                  prompt: "Select a College" %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
+    <%= f.label :date, "Date of Birth" %><br>
     <%= f.date_select :d %>
   </div>
   <div class="field">

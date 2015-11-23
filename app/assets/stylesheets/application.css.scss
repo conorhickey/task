@@ -15,19 +15,20 @@
  */
 
 body {
-    background-image: url("paper.gif");
+    background: #021325;
 }
 #banner {
   background: #021325;
-  padding: 10px;
-  border-bottom: 2px solid;
-  font: small-caps 40px/40px "Times New Roman", serif;
+
+  padding-left: 225px;
+  font: small-caps 100px/100px "Georgia", serif;
   color: #C8D4E0;
-  text-align: center;
+  text-align: left;
 
   img {
-    width:  55px;
-    height: 55px;
+
+    width:  110px;
+    height: 110px;
     
   }
 }
@@ -46,8 +47,10 @@ body {
 
   #main {
     margin-left: 17em;
-    padding: 1em;
+    padding: 2em;
+    padding-bottom: 45em;
     background: teal;
+		 
   }
 
   #side {

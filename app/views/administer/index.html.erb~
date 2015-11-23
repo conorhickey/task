@@ -1,4 +1,8 @@
 <h1>Welcome</h1>
 <h2>Access Gear Log: </br>
-<a href="http://localhost:3000/gears">Gear Log</a>
-It's <%= Time.now %>
+<a href="http://localhost:3000">Go Home</a></br></br>
+<a href="http://localhost:3000/gears">Gear Log</a></br></br>
+<a href="http://localhost:3000/admins">Admins</a></br></br>
+<a href="http://localhost:3000/admins/new">Create New Admins</a></br>
+</br></br></br>
+<%= Time.now %>

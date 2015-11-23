@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :category %><br>
-    <%= f.text_field :category %>
+    <%= f.select :category, Gear::CATEGORIES, prompt: "Select A Category" %>
   </div>
   <div class="field">
     <%= f.label :brand %><br>
@@ -37,11 +37,11 @@
   </div>
   <div class="field">
     <%= f.label :borrow %><br>
-    <%= f.text_field :borrow %>
+    <%= f.select :borrow, Gear::Value %>
   </div>
   <div class="field">
     <%= f.label :selling %><br>
-    <%= f.text_field :selling %>
+    <%= f.select :selling, Gear::Value %>
   </div>
   <div class="field">
     <%= f.label :price %><br>
