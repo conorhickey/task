@@ -1,28 +1,12 @@
 == README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
+1.9.2
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Application:
+Application is a gear log in this case for a Kayak club. 
+The Admin (Equipments Officer) can add gear and students to the site, they can also create more admins.
+Users viewing the site can see all the gear in the club and further details on this gear.
+They can also view each student and what gear each student owns.
+On each students gear page it will show if a gear is borrowable or sellable and if it is sellable the price of the gear.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
